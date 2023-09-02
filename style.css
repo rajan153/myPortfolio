@@ -11,13 +11,15 @@ body {
     background-color: #282C33;
     color: #ABB2BF;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     scroll-behavior: smooth;
 }
 
 /* LeftBar Content */
 #leftOptionForDesktop {
+    background-color: #282C33;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -26,14 +28,15 @@ body {
     margin-right: 2rem;
     left: 1rem;
     gap: 0.90rem;
+    z-index: 99;
 }
 
-/* Main Cotent */
+#leftOptionForDesktop svg {
+    fill: #ABB2BF;
+}
 
-#mainContent {
-    width: 1024px;
-    display: inline-flex;
-    flex-direction: column;
+#leftOptionForDesktop svg:hover {
+    fill: #FFF;
 }
 
 /* NavBar Section Starts from here */
@@ -71,13 +74,13 @@ body {
     color: #FFFFFF;
 }
 
-#navOptions {
+#options {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
 }
 
-#navOptions a {
+#options a {
     position: relative;
     text-decoration: none;
     display: block;
@@ -88,7 +91,7 @@ body {
     line-height: normal;
 }
 
-#navOptions a::after {
+#options a::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -101,22 +104,31 @@ body {
     transform-origin: right;
 }
 
-#navOptions a:hover {
+#options a:hover {
     color: #FFFFFF;
 }
 
-#navOptions a:hover::after {
+#options a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* Main Cotent */
+
+#mainContent {
+    width: 1024px;
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 7.8rem;
 }
 
 /* Hero Section starts from here */
 
 #heroSection {
-    margin-top: 7.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -144,6 +156,7 @@ span,
 }
 
 #btn {
+    background-color: #282C33;
     margin-top: 1.5rem;
     font-size: 16px;
     font-style: normal;
@@ -186,17 +199,54 @@ span,
 
 #images {
     position: relative;
-    width: 457px;
-    height: 386px;
+    width: 47%;
     flex-shrink: 0;
+}
+
+#images img {
+    position: relative;
+    right: 0;
+    width: 86%;
+    left: 75px;
+}
+
+#logoImageIcon {
+    position: absolute;
+    width: 155px;
+    top: 5rem;
+    left: 2.2rem;
+    flex-shrink: 0;
+}
+
+#dotBoxImage {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    top: 60%;
+    right: 3%;
+    z-index: 999;
 }
 
 #imageContent {
     position: absolute;
-    width: 88%;
-    top: 100%;
-    left: 4%;
+    width: 374px;
     padding: 8px;
+    gap: 10px;
+    top: 98%;
+    left: 16.5%;
+    color: #ABB2BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 1px solid #ABB2BF;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #282C33;
 }
 
 #box {
@@ -208,21 +258,7 @@ span,
     background: #C778DD;
 }
 
-#imageContent {
-    color: #ABB2BF;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    border: 1px solid #ABB2BF;
-    padding: 0.5rem;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: start;
-}
-
-#imageContentBold {
+#box b {
     color: #FFF;
     font-size: 16px;
     font-style: normal;
@@ -233,6 +269,7 @@ span,
 /* Quote Section starts from here */
 
 #quoteSection {
+    background-color: #282C33;
     align-self: center;
     padding: 32px;
     gap: 10px;
@@ -293,6 +330,17 @@ span,
     line-height: normal;
 }
 
+#quoteBoxIcon {
+    position: absolute;
+    width: 25px;
+    height: 91px;
+    flex-shrink: 0;
+    border-top: 1px solid #ABB2BF;
+    border-left: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
+    top: 41rem;
+    right: 0;
+}
 
 /* Project Section Starts from here */
 
@@ -305,15 +353,17 @@ span,
     align-items: center;
     gap: 16px;
     position: relative;
+    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 #upperSection h1 {
-    color:  #FFF;
+    color: #FFF;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-} 
+}
 
 #upperSection hr {
     width: 511px;
@@ -321,7 +371,7 @@ span,
     color: #C778DD;
 }
 
-#view {
+#view a{
     position: absolute;
     color: #FFF;
     font-size: 16px;
@@ -329,6 +379,29 @@ span,
     font-weight: 500;
     line-height: normal;
     right: 0;
+    text-decoration: none;
+}
+
+#projectDotBoxIcon {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    top: 58.5rem;
+    left: 0.8rem;
+}
+
+#projectBoxIcon {
+    position: absolute;
+    width: 30px;
+    height: 155px;
+    flex-shrink: 0;
+    border-top: 1px solid #ABB2BF;
+    border-left: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
+    right: 0;
+    top: 72rem;
 }
 
 /* Showing Projects starts from here */
@@ -342,7 +415,9 @@ span,
     gap: 1rem;
 }
 
-#project1, #project2, #project3 {
+#project1,
+#project2,
+#project3 {
     border: 1px solid #ABB2BF;
     width: 330px;
     position: relative;
@@ -352,7 +427,7 @@ span,
     width: 100%;
     object-fit: cover;
     border-bottom: 1px solid #ABB2BF;
-    
+
 }
 
 #project2 img {
@@ -385,7 +460,7 @@ span,
     gap: 1rem;
 }
 
-#projectContent h1{
+#projectContent h1 {
     align-self: stretch;
     color: #FFF;
     font-size: 24px;
@@ -433,7 +508,7 @@ span,
     transition: all 0.8s;
 }
 
-#projectliveBtn:hover{
+#projectliveBtn:hover {
     cursor: pointer;
 }
 
@@ -478,11 +553,11 @@ span,
     display: flex;
     justify-content: space-between;
     align-items: start;
+    flex-wrap: wrap;
 }
 
 #skillsShapes {
     position: relative;
-    width: 75%;
 }
 
 #dotBoxShape {
@@ -490,8 +565,8 @@ span,
     width: 63px;
     height: 63px;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
-    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     top: 3.125rem;
     left: 2rem;
     gap: 0.6rem;
@@ -521,8 +596,8 @@ span,
     width: 63px;
     height: 63px;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
-    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     top: 9.5rem;
     left: 13rem;
     gap: 0.6rem;
@@ -541,11 +616,15 @@ span,
 /* Skills Content or Boxes */
 
 #skillsBoxes {
+    width: 56%;
+    margin-left: 44%;
+    margin-top: 3rem;
     display: flex;
     align-items: start;
     justify-content: end;
     flex-wrap: wrap;
     gap: 1rem;
+
 }
 
 #skillLanguage {
@@ -700,7 +779,7 @@ span,
 
 /* About-Me section starts from here */
 
-#aboutMe{
+#aboutMe {
     margin-top: 7rem;
     position: relative;
 }
@@ -712,20 +791,42 @@ span,
     gap: 16px;
 }
 
-#aboutMeUpperSection hr{
+#aboutMeUpperSection hr {
     width: 326px;
     height: 2px;
     color: #C778DD;
 }
 
+#aboutMeBoxIcon {
+    position: absolute;
+    width: 2.5%;
+    height: 155px;
+    flex-shrink: 0;
+    border-top: 1px solid #ABB2BF;
+    border-right: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
+    top: 128.5rem;
+    left: 0;
+}
+
+#aboutMeDotStraightIcon {
+    position: absolute;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    top: 140rem;
+    right: 1rem;
+}
+
 /* About-Me Main Content starts from here */
 
 #aboutMeMainContent {
+    position: relative;
     margin-top: 1.4375rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    height: 450px;
+    flex-wrap: wrap;
 }
 
 #aboutMeContent p {
@@ -734,7 +835,7 @@ span,
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 2;
 }
 
 #aboutMeBtn {
@@ -752,6 +853,10 @@ span,
     background: transparent;
     transition: all 0.5s;
     position: relative;
+}
+
+a {
+    text-decoration: none;
 }
 
 #aboutMeBtn::before {
@@ -779,12 +884,12 @@ span,
 #aboutMeImageSource {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -3rem;
 }
 
 #aboutMeImageSource img {
-    width: 339px;
-    height: 507px;
+    width: 330px;
+    /* height: 507px; */
     flex-shrink: 0;
 }
 
@@ -796,6 +901,32 @@ span,
     flex-shrink: 0;
     color: #C778DD;
     left: 3rem;
+}
+
+/* About Me Dot Boxes on Image Starts from here */
+
+#aboutMeDotBoxImage1 {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    top: 4rem;
+    left: -0.4rem;
+}
+
+#aboutMeDotBoxImage2 {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 104px;
+    height: 56px;
+    right: 0;
+    top: 55%;
 }
 
 /* Contact Section starts from here */
@@ -827,6 +958,16 @@ span,
     color: #C778DD;
 }
 
+#contactDotBoxIcon {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    left: -0.1rem;
+    top: 165.5rem;
+}
+
 #contactMainContent {
     display: flex;
     justify-content: space-between;
@@ -851,9 +992,9 @@ span,
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 16px;   
+    gap: 16px;
     right: 0;
-    top: 5.5rem;
+    top: 5.4rem;
 }
 
 #contactBox h1 {
@@ -864,22 +1005,439 @@ span,
     line-height: normal;
 }
 
-#contactOnDiscord {
+#contactOnDiscord a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
+    text-decoration: none;
 }
 
-#contactOnMail {
+#contactOnMail a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
+    text-decoration: none;
+}
+
+#contactBox svg {
+    fill: #FFF;
+}
+
+#contactOnDiscord p:hover {
+    color: #FFFFFF;
+}
+
+#contactOnMail p:hover {
+    color: #FFFFFF;
+}
+
+/* Body Hr tag for differiate the Main Content to footer */
+
+#bodyHr {
+    margin-top: 145px;
+    width: 100%;
 }
 
 /* Footer Starts From Here */
 
 #footer {
-    margin-top: 9.0625rem;
+    margin-top: 2rem;
+    width: 1024px;
+    padding-bottom: 2rem;
+}
+
+#footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#footerLogoIcon {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+#footerLogoIcon h1 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#footerMail {
+    color: #ABB2BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#footerContentWithLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#footerLastContent {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Footer Social Media Starts From Here */
+
+#footerSocialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+}
+
+#footerSocialMedia h1 {
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#footerSocialMediaIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#footerSocialMediaIcons svg {
+    fill: #ABB2BF;
+}
+
+#footerSocialMediaIcons svg:hover {
+    fill: #FFF;
+}
+
+/* Copyright */
+
+#copyright {
+    margin-top: 48px;
+    text-align: center;
+}
+
+/* Nav MenuBar */
+
+#navIcon {
+    position: absolute;
+}
+
+#socialIconsForMobile {
+    position: relative;
+    display: none;
+}
+
+/* Nav Icon */
+
+#navIcon svg {
+    fill: #ABB2BF;
+}
+
+#menuIcon {
+    display: none;
+}
+
+#xMarkIcon {
+    display: none;
+}
+
+/* Media Query Starts From here */
+
+@media screen and (max-width: 1200px) {
+    #leftOptionForDesktop {
+        display: none;
+    }
+
+    #contactDotBoxIcon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    #aboutMeBoxIcon {
+        display: none;
+    }
+
+    #projectBoxIcon {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    #navBar {
+        width: 100%;
+    }
+
+    #mainContent {
+        display: flex;
+        width: 100vw;
+        padding: 8px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #heroSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #images {
+        width: 100%;
+    }
+
+    #images img {
+        width: 307.915px;
+        height: 260.077px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        left: 15px;
+    }
+
+    #imageContent {
+        display: flex;
+        width: 320px;
+        padding: 8px;
+        align-items: center;
+        gap: 10px;
+        left: 0;
+    }
+
+    #logoImageIcon {
+        width: 104.435px;
+        top: 4rem;
+        left: -0.4rem;
+    }
+
+    #dotBoxImage {
+        width: 56.597px;
+        height: 56.597px;
+        left: 241px;
+        gap: 0.75rem;
+    }
+
+    #content h1 {
+        width: 75vw;
+    }
+
+    #content p {
+        width: 93vw;
+    }
+
+    #project {
+        width: 100vw;
+    }
+
+    #projectDotBoxIcon {
+        top: 180rem;
+    }
+
+    #upperSection hr {
+        width: 11%;
+    }
+
+    #skills {
+        width: 100vw;
+    }
+
+    #skillsUpperSection hr{
+        width: 52%;
+    }
+
+    #skillsShapes {
+        display: none;
+    }
+
+    #skillsBoxes {
+        margin-left: 0;
+    }
+
+    #skillsMainContent {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #aboutMe {
+        width: 100vw;
+    }
+
+    #aboutMeUpperSection hr {
+        width: 42%;
+    }
+
+    #aboutMeContent p{
+        background-color: #282C33;
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    #aboutMeImageSource {
+        position: relative;
+        top: 5rem;
+    }
+
+    #aboutMeMainContent {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    #contactMainContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.8125rem;
+    }
+
+    #contactMainContent p {
+        width: 100%;
+    }
+
+    #aboutMeBtn {
+        margin-left: 1rem;
+    }
+
+    #contactBox {
+        position: relative;
+    }
+
+    #bodyHr {
+        margin-top: 15rem;
+    }
+
+    #footer {
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    #footerContent {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footerContentWithLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footerSocialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Menu Bar SetUp here */
+
+    #options2 {
+        width: 100vw;
+        display: none;
+    }
+
+    #options {
+        background-color: #282C33;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100vh;
+        margin-right: 40%;
+        margin-top: 3rem;
+        
+    }
+
+    #options span {
+        color: #C778DD;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #options a {
+        color: #FFF;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+
+    #logo {
+        position: absolute;
+        z-index: 9999;
+        top: 1rem;
+    }
+
+    #navOptions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100vw;
+        padding-right: 1rem;
+        overflow-y: scroll;
+    }
+
+    #logo {
+        margin-left: 1rem;
+    }
+    
+    #navIcon {
+        top: 1rem;
+    }
+
+    #menuIcon {
+        display: block;
+    }
+
+    #socialIconsForMobile svg {
+        fill: #ABB2BF;
+    }
+
+    #socialIconsForMobile {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    
 }
