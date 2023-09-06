@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: #282C33;
+    scroll-behavior: smooth;
+    color: #ABB2BF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    color: #C778DD;
+}
+
+/* NavBar Options */
+
+#navBar {
+    display: flex;
+    position: fixed;
+    width: 1024px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 32px 0px 8px 0px;
+    background-color: #282C33;
+    z-index: 9999;
+}
+
+#logo a {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    color: #ABB2BF;
+}
+
+#logo svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#logo a {
+    color: #FFFFFF;
+}
+
+#options {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+#options a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    color: #ABB2BF;
+    transition: 0.5s;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#options a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #C778DD;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+#options a:hover {
+    color: #FFFFFF;
+}
+
+#options a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#navIcon {
+    position: absolute;
+}
+
+#socialIconsForMobile {
+    position: relative;
+    display: none;
+}
+
+/* Nav Icon */
+
+#navIcon svg {
+    fill: #ABB2BF;
+}
+
+#menuIcon {
+    display: none;
+}
+
+#xMarkIcon {
+    display: none;
+}
+
+/* Left MenuBar */
+
+#leftOptionForDesktop {
+    background-color: #282C33;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    left: 1rem;
+    gap: 0.90rem;
+    z-index: 99;
+}
+
+#leftOptionForDesktop svg {
+    fill: #ABB2BF;
+}
+
+#leftOptionForDesktop svg:hover {
+    fill: #FFF;
+}
+
+
+/* Main Content starts from here*/
+
+main {
+    margin-top: 103px;
+}
+
+.projectMainHeading {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.startingPara {
+    margin-top: 14px;
+}
+
+.completeAppHeading {
+    margin-top: 68px;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Showing Projects */
+
+#showingProject {
+    margin-top: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 1024px;
+}
+
+.project1,
+.project2,
+.project3,
+.project4,
+.project5,
+.smallProject1,
+.smallProject2,
+.smallProject3,
+.smallProject4,
+.smallProject5,
+.smallProject6,
+.smallProject7 {
+    border: 1px solid #ABB2BF;
+    width: 330px;
+    position: relative;
+}
+
+.project1 img {
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ABB2BF;
+
+}
+
+.project2 img {
+    width: 100%;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+.project3 img {
+    width: 100%;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+.project4 img {
+    width: 100%;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+.project5 img {
+    width: 100%;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+#technologies {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+/* Project Content Starts from here */
+
+#projectContent {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#projectContent a {
+    text-decoration: none;
+}
+
+#projectContent h1 {
+    align-self: stretch;
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#projectContent p {
+    align-self: stretch;
+    color: #ABB2BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.projectliveBtn {
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 10px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 1px solid #C778DD;
+    background: transparent;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.projectliveBtn::before {
+    content: "";
+    position: absolute;
+    background: rgba(199, 120, 221, 0.20);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.projectliveBtn:hover {
+    cursor: pointer;
+}
+
+.projectliveBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.projectContent a {
+    text-decoration: none;
+}
+
+/* Small project starts from here */
+
+.projectSecondHeading {
+    margin-top: 81px;
+}
+
+.projectSecondHeading h1 {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.smallProjectsShows {
+    margin-top: 48px;
+    width: 1024px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Body Hr line */
+
+.bodyHr {
+    width: 100%;
+    color: #ABB2BF;
+    margin-top: 187px;
+}
+
+/* Footer starts from here */
+
+#footer {
+    margin-top: 2rem;
+    width: 1024px;
+    padding-bottom: 2rem;
+}
+
+#footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#footerLogoIcon {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+#footerLogoIcon h1 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#footerMail {
+    color: #ABB2BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#footerContentWithLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#footerLastContent {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Footer Social Media Starts From Here */
+
+#footerSocialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#footerSocialMedia h1 {
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#footerSocialMediaIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#footerSocialMediaIcons svg {
+    fill: #ABB2BF;
+}
+
+#footerSocialMediaIcons svg:hover {
+    fill: #FFF;
+}
+
+/* Sides Box and DotBox */
+
+.rightFirstBox {
+    position: absolute;
+    top: 18rem;
+    right: 0;
+    width: 60px;
+    height: 155px;
+    border-top: 1px solid #ABB2BF;
+    border-left: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+.rightDotBox {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    top: 93rem;
+    right: 0;
+}
+
+.leftFirstDotBox {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    top: 30rem;
+    left: 1rem;
+}
+
+.leftFirstBox {
+    position: absolute;
+    width: 50px;
+    height: 103px;
+    border-top: 1px solid #ABB2BF;
+    border-right: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
+    left: 0;
+    top: 83rem;
+}
+
+.leftSecondDotBox {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    left: 0;
+    top: 103rem;
+}
+
+/* Media Query Starts from here */
+
+@media screen and (max-width:1200px) {
+
+    #leftOptionForDesktop {
+        display: none;
+    }
+
+    .rightFirstBox,
+    .rightDotBox,
+    .leftFirstDotBox,
+    .leftFirstBox,
+    .leftSecondDotBox {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+
+    #wrapper {
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    #navBar
+    {
+        width: 100%;
+    }
+
+    #showingProject,
+    .smallProjectsShows {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #options2 {
+        width: 100vw;
+        display: none;
+        height: 100vh;
+    }
+
+    #options {
+        background-color: #282C33;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100vw;
+        height: 100%;
+        margin-right: 40%;
+        gap: 1%;
+    }
+
+    #options span {
+        color: #C778DD;
+        font-size: 100%;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    #options a {
+        color: #FFF;
+        font-size: 100%;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 3rem;
+        margin-left: 2rem;
+        cursor: pointer;
+    }
+
+    #logo {
+        position: absolute;
+        z-index: 9999;
+        top: 1rem;
+    }
+
+    #navOptions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100vw;
+        padding-right: 1rem;
+        overflow-y: scroll;
+    }
+
+    #logo {
+        margin-left: 1rem;
+    }
+    
+    #navIcon {
+        top: 1rem;
+    }
+
+    #menuIcon {
+        display: block;
+    }
+
+    #socialIconsForMobile svg {
+        fill: #ABB2BF;
+    }
+
+    #socialIconsForMobile {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    /* Footer */
+
+    #footer {
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    #footerContent {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footerContentWithLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footerSocialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
