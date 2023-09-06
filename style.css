@@ -274,7 +274,7 @@ span,
     padding: 32px;
     gap: 10px;
     border: 1px solid #ABB2BF;
-    margin-top: 8.1rem;
+    margin-top: 9.1rem;
     position: relative;
 }
 
@@ -371,7 +371,7 @@ span,
     color: #C778DD;
 }
 
-#view a{
+.view a{
     position: absolute;
     color: #FFF;
     font-size: 16px;
@@ -380,6 +380,10 @@ span,
     line-height: normal;
     right: 0;
     text-decoration: none;
+}
+
+.view a:hover{
+    cursor: pointer;
 }
 
 #projectDotBoxIcon {
@@ -853,10 +857,12 @@ span,
     background: transparent;
     transition: all 0.5s;
     position: relative;
+    width: 150px;
 }
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 #aboutMeBtn::before {
@@ -1104,7 +1110,7 @@ a {
 #footerSocialMedia {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 12px;
 }
@@ -1130,13 +1136,6 @@ a {
 
 #footerSocialMediaIcons svg:hover {
     fill: #FFF;
-}
-
-/* Copyright */
-
-#copyright {
-    margin-top: 48px;
-    text-align: center;
 }
 
 /* Nav MenuBar */
@@ -1379,7 +1378,6 @@ a {
         height: 100vh;
         margin-right: 40%;
         margin-top: 3rem;
-        
     }
 
     #options span {
@@ -1398,6 +1396,7 @@ a {
         line-height: normal;
         margin-top: 3rem;
         margin-left: 2rem;
+        cursor: pointer;
     }
 
     #logo {
@@ -1438,6 +1437,4 @@ a {
         justify-content: center;
         gap: 0.5rem;
     }
-
-    
 }
