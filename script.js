@@ -19,6 +19,7 @@ function openProjectFile() {
     window.open("./pages/project.html", "_self");
 }
 
+// Function event listener  
 menuIcon.addEventListener("click", () => {
     menuIcon.style.display = "none";
     options.style.display = "block";
