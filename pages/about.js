@@ -8,7 +8,7 @@ const contacts = document.querySelector(".contact");
 
 home.addEventListener("click", openHomeFile);
 work.addEventListener("click", openProjectFile);
-about.addEventListener("click", openAboutFile)
+about.addEventListener("click", openAboutFile);
 contacts.addEventListener("click", openContactsFile);
 
 // For Home
