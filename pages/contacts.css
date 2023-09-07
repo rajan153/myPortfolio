@@ -16,11 +16,15 @@ body {
     align-items: center;
 }
 
+#wrapper {
+    width: 1024px;
+}
+
 span {
     color: #C778DD;
 }
 
-/* NavBar Options */
+/* NavBar Starts From here */
 
 #navBar {
     display: flex;
@@ -141,14 +145,12 @@ span {
     fill: #FFF;
 }
 
-
-/* Main Content starts from here*/
+/* Main Section starts from here */
 
 main {
-    margin-top: 103px;
+    margin-top: 5rem;
 }
-
-.projectMainHeading {
+main header h1 {
     color: #FFF;
     font-size: 32px;
     font-style: normal;
@@ -156,166 +158,90 @@ main {
     line-height: normal;
 }
 
-.startingPara {
-    margin-top: 14px;
-}
-
-.completeAppHeading {
-    margin-top: 68px;
+main header p {
     color: #FFF;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-/* Showing Projects */
-
-#showingProject {
-    margin-top: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 1024px;
-}
-
-.project1,
-.project2,
-.project3,
-.project4,
-.project5,
-.smallProject1,
-.smallProject2,
-.smallProject3,
-.smallProject4,
-.smallProject5,
-.smallProject6,
-.smallProject7 {
-    border: 1px solid #ABB2BF;
-    width: 330px;
-    position: relative;
-}
-
-.project1 img {
-    width: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid #ABB2BF;
-
-}
-
-.project2 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-.project3 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-.project4 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-.project5 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-#technologies {
-    display: flex;
-    padding: 8px;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-/* Project Content Starts from here */
-
-#projectContent {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#projectContent a {
-    text-decoration: none;
-}
-
-#projectContent h1 {
-    align-self: stretch;
-    color: #FFF;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-#projectContent p {
-    align-self: stretch;
-    color: #ABB2BF;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.projectliveBtn {
+/* Main Contact starts from here */
+
+.contactInfo {
+    margin-top: 46px;
     display: flex;
-    padding: 8px 16px;
     align-items: flex-start;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 117px;
+    flex-wrap: wrap;
+}
+
+.contactInfoContent {
+    width: 508px;
+}
+
+#contactBox {
+    border: 1px solid #ABB2BF;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    width: 242px;
+}
+
+#contactBox h1 {
     color: #FFF;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
-    border: 1px solid #C778DD;
-    background: transparent;
-    transition: all 0.5s;
-    position: relative;
 }
 
-.projectliveBtn::before {
-    content: "";
-    position: absolute;
-    background: rgba(199, 120, 221, 0.20);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.8s;
-}
-
-.projectliveBtn:hover {
-    cursor: pointer;
-}
-
-.projectliveBtn:hover::before {
-    transform: scaleX(1);
-}
-
-.projectContent a {
+#contactOnDiscord a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
     text-decoration: none;
+    color: #ABB2BF;
 }
 
-/* Small project starts from here */
-
-.projectSecondHeading {
-    margin-top: 81px;
+#contactOnMail a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    text-decoration: none;
+    color: #ABB2BF;
 }
 
-.projectSecondHeading h1 {
+#contactBox svg {
+    fill: #FFF;
+}
+
+#contactOnDiscord p:hover {
+    color: #FFFFFF;
+}
+
+#contactOnMail p:hover {
+    color: #FFFFFF;
+}
+
+/* All Media Starts from here */
+
+.allMedia {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.allMedia h2 {
     color: #FFF;
     font-size: 32px;
     font-style: normal;
@@ -323,22 +249,32 @@ main {
     line-height: normal;
 }
 
-.smallProjectsShows {
-    margin-top: 48px;
-    width: 1024px;
+.twitter {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5px;
 }
 
-/* Body Hr line */
+.twitter svg {
+    fill: #FFF;
+}
+
+.twitter a {
+    text-decoration: none;
+    color: #ABB2BF;
+}
+
+.twitter a:hover {
+    color: #FFF;
+}
+
+/* Footer section starts from here */
 
 .bodyHr {
     width: 100%;
     color: #ABB2BF;
-    margin-top: 187px;
+    margin-top: 83px;
 }
 
 /* Footer starts from here */
@@ -433,13 +369,13 @@ main {
     fill: #FFF;
 }
 
-/* Sides Box and DotBox */
+/* Sides Boxes and Dot Boxes */
 
-.rightFirstBox {
+.rightBox {
     position: absolute;
-    top: 18rem;
     right: 0;
-    width: 60px;
+    top: 13rem;
+    width: 50px;
     height: 155px;
     border-top: 1px solid #ABB2BF;
     border-left: 1px solid #ABB2BF;
@@ -449,62 +385,40 @@ main {
 .rightDotBox {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem;
-    top: 93rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    column-gap: 1rem;
+    bottom: -1rem;
     right: 0;
 }
 
-.leftFirstDotBox {
+.leftDotBox {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
     gap: 1rem;
-    top: 30rem;
-    left: 1rem;
-}
-
-.leftFirstBox {
-    position: absolute;
-    width: 50px;
-    height: 103px;
-    border-top: 1px solid #ABB2BF;
-    border-right: 1px solid #ABB2BF;
-    border-bottom: 1px solid #ABB2BF;
+    top: 22rem;
     left: 0;
-    top: 83rem;
 }
 
-.leftSecondDotBox {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem;
-    left: 0;
-    top: 103rem;
-}
-
-/* Media Query Starts from here */
+/* Media Query Starts From here */
 
 @media screen and (max-width:1200px) {
 
     #leftOptionForDesktop {
         display: none;
     }
+}
 
-    .rightFirstBox,
-    .rightDotBox,
-    .leftFirstDotBox,
-    .leftFirstBox,
-    .leftSecondDotBox {
+@media screen and (max-width:1100px) {
+
+    .rightBox, .leftDotBox, .rightDotBox {
         display: none;
     }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width:1024px) {
 
     #wrapper {
         width: 100%;
@@ -516,14 +430,6 @@ main {
         width: 100%;
         padding-right: 1rem;
         padding-left: 0rem;
-    }
-
-    #showingProject,
-    .smallProjectsShows {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     #options2 {
@@ -607,6 +513,7 @@ main {
     #footer {
         margin-top: 5rem;
         width: 100%;
+        padding-left: 1rem;
     }
 
     #footerContent {
@@ -629,3 +536,24 @@ main {
         justify-content: center;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,11 +16,15 @@ body {
     align-items: center;
 }
 
+#wrapper {
+    width: 1024px;
+}
+
 span {
     color: #C778DD;
 }
 
-/* NavBar Options */
+/* NavBar Starts From here */
 
 #navBar {
     display: flex;
@@ -141,14 +145,13 @@ span {
     fill: #FFF;
 }
 
-
-/* Main Content starts from here*/
+/* Main section starts from here */
 
 main {
-    margin-top: 103px;
+    margin-top: 5rem;
 }
 
-.projectMainHeading {
+main header h1 {
     color: #FFF;
     font-size: 32px;
     font-style: normal;
@@ -156,166 +159,244 @@ main {
     line-height: normal;
 }
 
-.startingPara {
+main header p {
     margin-top: 14px;
-}
-
-.completeAppHeading {
-    margin-top: 68px;
     color: #FFF;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-/* Showing Projects */
-
-#showingProject {
-    margin-top: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 1024px;
-}
-
-.project1,
-.project2,
-.project3,
-.project4,
-.project5,
-.smallProject1,
-.smallProject2,
-.smallProject3,
-.smallProject4,
-.smallProject5,
-.smallProject6,
-.smallProject7 {
-    border: 1px solid #ABB2BF;
-    width: 330px;
-    position: relative;
-}
-
-.project1 img {
-    width: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid #ABB2BF;
-
-}
-
-.project2 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-.project3 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-.project4 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-.project5 img {
-    width: 100%;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-#technologies {
-    display: flex;
-    padding: 8px;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
-    border-bottom: 1px solid #ABB2BF;
-}
-
-/* Project Content Starts from here */
-
-#projectContent {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#projectContent a {
-    text-decoration: none;
-}
-
-#projectContent h1 {
-    align-self: stretch;
-    color: #FFF;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-#projectContent p {
-    align-self: stretch;
-    color: #ABB2BF;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.projectliveBtn {
+#aboutMeMainContent {
+    position: relative;
+    margin-top: 4rem;
     display: flex;
-    padding: 8px 16px;
     align-items: flex-start;
-    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#aboutMeContent p {
+    width: 515px;
+    color: #ABB2BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+}
+
+#aboutMeImageSource {
+    position: absolute;
+    right: 0;
+    top: -3rem;
+}
+
+#aboutMeImageSource img {
+    width: 330px;
+    flex-shrink: 0;
+}
+
+#aboutMeImageSource hr {
+    position: absolute;
+    top: 99%;
+    width: 271px;
+    height: 1px;
+    flex-shrink: 0;
+    color: #C778DD;
+    left: 3rem;
+}
+
+/* About Me Dot Boxes on Image Starts from here */
+
+#aboutMeDotBoxImage1 {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+    top: 4rem;
+    left: -0.4rem;
+}
+
+#aboutMeDotBoxImage2 {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 104px;
+    height: 56px;
+    right: 0;
+    top: 55%;
+}
+
+/* Skills Section starts from here */
+
+.skills {
+    margin-top: 120px;
+}
+
+#skillLanguage {
+    border: 1px solid #ABB2BF;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 178px;
+    margin-top: 56px;
+}
+
+#skillLanguage h1 {
     color: #FFF;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
-    border: 1px solid #C778DD;
-    background: transparent;
-    transition: all 0.5s;
-    position: relative;
+    display: flex;
+    padding: 8px 8px;
+    align-self: stretch;
+    justify-self: center;
+    border-bottom: 1px solid #ABB2BF;
 }
 
-.projectliveBtn::before {
-    content: "";
-    position: absolute;
-    background: rgba(199, 120, 221, 0.20);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.8s;
+#skillLanguage p {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
 
-.projectliveBtn:hover {
-    cursor: pointer;
+#skillDatabse {
+    border: 1px solid #ABB2BF;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 178px;
 }
 
-.projectliveBtn:hover::before {
-    transform: scaleX(1);
+#skillDatabse h1 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 8px 8px;
+    align-self: stretch;
+    justify-self: center;
+    border-bottom: 1px solid #ABB2BF;
 }
 
-.projectContent a {
-    text-decoration: none;
+#skillDatabse p {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
 
-/* Small project starts from here */
-
-.projectSecondHeading {
-    margin-top: 81px;
+#skillTools {
+    border: 1px solid #ABB2BF;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 178px;
 }
 
-.projectSecondHeading h1 {
+#skillTools h1 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 8px 8px;
+    align-self: stretch;
+    justify-self: center;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+#skillTools p {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#skillOthers {
+    border: 1px solid #ABB2BF;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 178px;
+}
+
+#skillOthers h1 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 8px 8px;
+    align-self: stretch;
+    justify-self: center;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+#skillOthers p {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#skillFrameworks {
+    border: 1px solid #ABB2BF;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 178px;
+}
+
+#skillFrameworks h1 {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    padding: 8px 8px;
+    align-self: stretch;
+    justify-self: center;
+    border-bottom: 1px solid #ABB2BF;
+}
+
+#skillFrameworks p {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* Fun Facts starts from here */
+
+.funnyFacts {
+    margin-top: 83px;
+}
+
+.funnyFacts header h1 {
     color: #FFF;
     font-size: 32px;
     font-style: normal;
@@ -323,22 +404,53 @@ main {
     line-height: normal;
 }
 
-.smallProjectsShows {
-    margin-top: 48px;
-    width: 1024px;
+.funnyFacts main {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    width: 80%;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
 }
 
-/* Body Hr line */
+.funnyFactsQuotes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70%;
+    width: 605px;
+}
+
+.funnyFactsQuotes p {
+    border: 1px solid #ABB2BF;
+    padding: 8px;
+    color: #ABB2BF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #282C33;
+}
+
+.dotBox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    position: relative;
+    width: 1rem;
+    right: 4.2rem;
+}
+
+/* Footer section starts from here */
 
 .bodyHr {
     width: 100%;
     color: #ABB2BF;
-    margin-top: 187px;
+    margin-top: 162px;
 }
 
 /* Footer starts from here */
@@ -433,97 +545,93 @@ main {
     fill: #FFF;
 }
 
-/* Sides Box and DotBox */
+/* Sides Boxes and Dot Boxes */
 
-.rightFirstBox {
+.rightBox {
     position: absolute;
-    top: 18rem;
-    right: 0;
-    width: 60px;
+    width: 50px;
     height: 155px;
     border-top: 1px solid #ABB2BF;
     border-left: 1px solid #ABB2BF;
     border-bottom: 1px solid #ABB2BF;
-}
-
-.rightDotBox {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem;
-    top: 93rem;
+    top: 15rem;
     right: 0;
 }
 
-.leftFirstDotBox {
+.leftBox {
+    position: absolute;
+    width: 50px;
+    height: 155px;
+    border-top: 1px solid #ABB2BF;
+    border-right: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
+    top: 72rem;
+    left: 0;
+}
+
+.leftDotBox {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
-    top: 30rem;
     left: 1rem;
+    top: 21rem;
 }
 
-.leftFirstBox {
-    position: absolute;
-    width: 50px;
-    height: 103px;
-    border-top: 1px solid #ABB2BF;
-    border-right: 1px solid #ABB2BF;
-    border-bottom: 1px solid #ABB2BF;
-    left: 0;
-    top: 83rem;
-}
-
-.leftSecondDotBox {
+.rightFirstDotBox {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 1rem;
-    left: 0;
-    top: 103rem;
+    right: 0;
+    top: 42rem;
 }
 
-/* Media Query Starts from here */
+.rightSecondDotBox {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    right: 0;
+    top: 85rem;
+}
+
+
+/* Media Query starts from here */
 
 @media screen and (max-width:1200px) {
 
     #leftOptionForDesktop {
         display: none;
     }
+}
 
-    .rightFirstBox,
-    .rightDotBox,
-    .leftFirstDotBox,
-    .leftFirstBox,
-    .leftSecondDotBox {
+
+@media screen and (max-width:1100px) {
+
+    .rightBox,
+    .leftBox,
+    .leftDotBox,
+    .rightDotBox {
         display: none;
     }
 }
 
-@media screen and (max-width: 1020px) {
+
+@media screen and (max-width:1024px) {
 
     #wrapper {
         width: 100%;
         padding-left: 1rem;
     }
 
-    #navBar
-    {
+    #navBar {
         width: 100%;
         padding-right: 1rem;
         padding-left: 0rem;
-    }
-
-    #showingProject,
-    .smallProjectsShows {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     #options2 {
@@ -581,7 +689,7 @@ main {
     #logo {
         margin-left: 1rem;
     }
-    
+
     #navIcon {
         top: 1rem;
     }
@@ -602,11 +710,58 @@ main {
         gap: 0.5rem;
     }
 
+    #skillsBoxes {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    #aboutMeMainContent {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* About me Content starts from here */
+
+    #aboutMeContent p{
+        background-color: #282C33;
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    #aboutMeImageSource {
+        position: relative;
+        top: 5rem;
+    }
+
+    #aboutMeMainContent {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    #contactMainContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.8125rem;
+    }
+
+    #contactMainContent p {
+        width: 100%;
+    }
+
     /* Footer */
 
     #footer {
         margin-top: 5rem;
         width: 100%;
+        padding-left: 1rem;
     }
 
     #footerContent {
