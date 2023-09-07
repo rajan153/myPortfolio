@@ -3,10 +3,12 @@ const xMarkIcon = document.getElementById("xMarkIcon");
 const options = document.getElementById("options2");
 const home = document.querySelector(".home");
 const work = document.querySelector(".work");
+const about = document.querySelector(".about");
 const contacts = document.querySelector(".contact");
 
 home.addEventListener("click", openHomeFile);
 work.addEventListener("click", openProjectFile);
+about.addEventListener("click", openAboutFile);
 contacts.addEventListener("click", openContactsFile);
 
 // For Home
@@ -20,6 +22,11 @@ function openProjectFile() {
 }
 
 // For About
+function openAboutFile() {
+    window.open("./about.html", "_self");
+}
+
+// For Contact
 function openContactsFile() {
     window.open("../pages/contacts.html", "_self");
 }
