@@ -514,6 +514,8 @@ main {
     #navBar
     {
         width: 100%;
+        padding-right: 1rem;
+        padding-left: 0rem;
     }
 
     #showingProject,
