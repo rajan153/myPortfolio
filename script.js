@@ -4,10 +4,12 @@ const options = document.getElementById("options2");
 const viewButton = document.querySelector(".view");
 const home = document.querySelector(".home");
 const work = document.querySelector(".work");
+const contacts = document.querySelector(".contact");
 
 home.addEventListener("click", openHomeFile);
 work.addEventListener("click", openProjectFile);
 viewButton.addEventListener("click", openProjectFile);
+contacts.addEventListener("click", openContactsFile);
 
 // For Home
 function openHomeFile() {
@@ -17,6 +19,11 @@ function openHomeFile() {
 // For Project
 function openProjectFile() {
     window.open("./pages/project.html", "_self");
+}
+
+// For Contacts
+function openContactsFile() {
+    window.open("./pages/contacts.html", "_self");
 }
 
 // Function event listener  
