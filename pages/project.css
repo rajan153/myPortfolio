@@ -225,7 +225,7 @@ main {
     border-bottom: 1px solid #ABB2BF;
 }
 
-#technologies {
+.technologies {
     display: flex;
     padding: 8px;
     align-items: flex-start;
@@ -236,7 +236,7 @@ main {
 
 /* Project Content Starts from here */
 
-#projectContent {
+.projectContent {
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -245,11 +245,11 @@ main {
     gap: 1rem;
 }
 
-#projectContent a {
+.projectContent a {
     text-decoration: none;
 }
 
-#projectContent h1 {
+.projectContent h2 {
     align-self: stretch;
     color: #FFF;
     font-size: 24px;
@@ -258,7 +258,7 @@ main {
     line-height: normal;
 }
 
-#projectContent p {
+.projectContent p {
     align-self: stretch;
     color: #ABB2BF;
     font-size: 16px;
@@ -315,7 +315,7 @@ main {
     margin-top: 81px;
 }
 
-.projectSecondHeading h1 {
+.projectSecondHeading h2 {
     color: #FFF;
     font-size: 32px;
     font-style: normal;
@@ -368,7 +368,7 @@ main {
     gap: 9px;
 }
 
-#footerLogoIcon h1 {
+#footerLogoIcon h2 {
     color: #FFF;
     font-size: 16px;
     font-style: normal;
@@ -410,7 +410,7 @@ main {
     gap: 12px;
 }
 
-#footerSocialMedia h1 {
+#footerSocialMedia h2 {
     color: #FFF;
     font-size: 24px;
     font-style: normal;
@@ -529,7 +529,6 @@ main {
     #options2 {
         width: 100vw;
         display: none;
-        height: 100vh;
     }
 
     #options {
@@ -538,15 +537,14 @@ main {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        width: 100vw;
-        height: 100%;
+        height: 100vh;
         margin-right: 40%;
-        gap: 1%;
+        margin-top: 3rem;
     }
 
     #options span {
         color: #C778DD;
-        font-size: 100%;
+        font-size: 32px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -554,7 +552,7 @@ main {
 
     #options a {
         color: #FFF;
-        font-size: 100%;
+        font-size: 32px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -581,7 +579,7 @@ main {
     #logo {
         margin-left: 1rem;
     }
-    
+
     #navIcon {
         top: 1rem;
     }
